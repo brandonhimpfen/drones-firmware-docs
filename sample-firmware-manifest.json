@@ -1,0 +1,29 @@
+{
+  "name": "example-drone-flight-fw",
+  "version": "0.1.0",
+  "target": "example-fc-v1",
+  "vehicle_types": [
+    "multirotor"
+  ],
+  "artifact": {
+    "filename": "example-drone-flight-fw-0.1.0.bin",
+    "format": "bin",
+    "size_bytes": 1048576
+  },
+  "checksum": {
+    "algorithm": "sha256",
+    "value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+  "build": {
+    "commit": "abc1234",
+    "timestamp": "2026-01-01T00:00:00Z",
+    "toolchain": "gcc-arm-none-eabi 13"
+  },
+  "compatibility": {
+    "bootloader_min": "1.0.0",
+    "boards": [
+      "example-fc-v1"
+    ]
+  },
+  "known_issues": []
+}

@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Drone Firmware Parameter Catalog",
+  "type": "object",
+  "required": [
+    "firmware_version",
+    "parameters"
+  ],
+  "properties": {
+    "firmware_version": {
+      "type": "string"
+    },
+    "parameters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "type",
+          "default",
+          "description",
+          "risk"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "integer",
+              "number",
+              "boolean",
+              "string",
+              "enum"
+            ]
+          },
+          "default": {},
+          "units": {
+            "type": "string"
+          },
+          "min": {
+            "type": "number"
+          },
+          "max": {
+            "type": "number"
+          },
+          "description": {
+            "type": "string"
+          },
+          "risk": {
+            "enum": [
+              "low",
+              "medium",
+              "high"
+            ]
+          },
+          "restart_required": {
+            "type": "boolean"
+          },
+          "introduced": {
+            "type": "string"
+          },
+          "deprecated": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

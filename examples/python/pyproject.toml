@@ -1,0 +1,9 @@
+[project]
+name = "drones-firmware-docs-examples"
+version = "0.1.0"
+description = "Python examples for drone firmware documentation workflows"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

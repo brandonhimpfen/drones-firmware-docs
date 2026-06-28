@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Drone Firmware Manifest",
+  "type": "object",
+  "required": [
+    "name",
+    "version",
+    "target",
+    "artifact",
+    "checksum",
+    "build"
+  ],
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "target": {
+      "type": "string"
+    },
+    "vehicle_types": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "artifact": {
+      "type": "object",
+      "required": [
+        "filename",
+        "format"
+      ],
+      "properties": {
+        "filename": {
+          "type": "string"
+        },
+        "format": {
+          "type": "string"
+        },
+        "size_bytes": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "checksum": {
+      "type": "object",
+      "required": [
+        "algorithm",
+        "value"
+      ],
+      "properties": {
+        "algorithm": {
+          "enum": [
+            "sha256",
+            "sha512"
+          ]
+        },
+        "value": {
+          "type": "string"
+        }
+      }
+    },
+    "build": {
+      "type": "object",
+      "required": [
+        "commit",
+        "timestamp",
+        "toolchain"
+      ],
+      "properties": {
+        "commit": {
+          "type": "string"
+        },
+        "timestamp": {
+          "type": "string"
+        },
+        "toolchain": {
+          "type": "string"
+        }
+      }
+    },
+    "compatibility": {
+      "type": "object"
+    },
+    "known_issues": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

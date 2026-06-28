@@ -1,0 +1,29 @@
+{
+  "firmware_version": "0.1.0",
+  "parameters": [
+    {
+      "name": "BAT_LOW_VOLTAGE",
+      "type": "number",
+      "default": 10.5,
+      "units": "V",
+      "min": 9.0,
+      "max": 12.6,
+      "description": "Low battery warning threshold.",
+      "risk": "high",
+      "restart_required": false,
+      "introduced": "0.1.0"
+    },
+    {
+      "name": "LOG_RATE_HZ",
+      "type": "integer",
+      "default": 50,
+      "units": "Hz",
+      "min": 1,
+      "max": 200,
+      "description": "Default logging rate.",
+      "risk": "medium",
+      "restart_required": false,
+      "introduced": "0.1.0"
+    }
+  ]
+}

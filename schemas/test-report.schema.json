@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Drone Firmware Test Report",
+  "type": "object",
+  "required": [
+    "test_id",
+    "firmware_version",
+    "result",
+    "evidence"
+  ],
+  "properties": {
+    "test_id": {
+      "type": "string"
+    },
+    "firmware_version": {
+      "type": "string"
+    },
+    "hardware_target": {
+      "type": "string"
+    },
+    "test_type": {
+      "enum": [
+        "unit",
+        "integration",
+        "sitl",
+        "bench",
+        "hil",
+        "flight",
+        "regression"
+      ]
+    },
+    "result": {
+      "enum": [
+        "pass",
+        "fail",
+        "blocked",
+        "not_run"
+      ]
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "notes": {
+      "type": "string"
+    },
+    "reviewer": {
+      "type": "string"
+    }
+  }
+}
